@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(
+          title: const Center(
             child: Text(
               "malathamin",
               style: TextStyle(
@@ -25,12 +25,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          backgroundColor: Color.fromARGB(222, 0, 0, 0),
+          backgroundColor: const Color.fromARGB(222, 0, 0, 0),
         ),
         body: GridView.builder(
           itemBuilder: (context, index) {
             return Card(
-              color: Color.fromARGB(222, 0, 0, 0),
+              color: const Color.fromARGB(222, 0, 0, 0),
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: Row(
@@ -38,17 +38,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     Expanded(
                         child: Text(
                       Food.foodlist[index].foodName,
-                      style: TextStyle(
-                          fontSize: 25.0,
+                      style: const TextStyle(
+                          fontSize: 15.0,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     )),
                     Container(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: Image.asset(
                         Food.foodlist[index].foodImage,
-                        height: 200,
-                        width: 200,
+                        height: 120,
+                        width: 120,
                       ),
                     )
                   ],
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           },
           itemCount: Food.foodlist.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 4.0,
             mainAxisSpacing: 4.0,
